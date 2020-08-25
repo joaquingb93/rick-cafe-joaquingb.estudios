@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../WEB/RicksCafe/fonts"
+		},
+		{
+			"path": "../../../WEB/RicksCafe/scss"
+		},
+		{
+			"path": "../../../WEB/RicksCafe/js"
+		},
+		{
+			"path": "../../../WEB/RicksCafe/images"
+		},
+		{
+			"path": "../../../WEB/RicksCafe/css"
+		}
+	],
+	"settings": {}
+}

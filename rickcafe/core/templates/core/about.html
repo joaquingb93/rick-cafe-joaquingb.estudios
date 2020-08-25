@@ -1,0 +1,67 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+    $(".filter-button").click(function(){
+        var value = $(this).attr('data-filter');
+        
+        if(value == "all")
+        {
+            //$('.filter').removeClass('hidden');
+            $('.filter').show('1000');
+        }
+        else
+        {
+//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+            $(".filter").not('.'+value).hide('3000');
+            $('.filter').filter('.'+value).show('3000');
+            
+        }
+    });
+    
+    if ($(".filter-button").removeClass("active")) {
+$(this).removeClass("active");
+}
+$(this).addClass("active");
+
+});
+      
+    </script>
+    {% load static %}
+         <!-- CONTENIDO DE LA PAGINA  -->
+
+
+        <div class="container-fluid">
+          <div class="map-responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7624.629775382792!2d-6.970891725238128!3d38.84282311614688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd16e68b469d590f%3A0x5fed302725b3453a!2zUmlja8K0cyBDYWbDqSBCaXN0csOzIEJhcg!5e0!3m2!1ses!2ses!4v1598227368634!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+      </div>
+      <div class="container">
+        <div class="row">
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <img src="{% static '/core/images/img01.jpg' %}"  class="img-responsive">
+            </div>
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <img src="{% static '/core/images/img02.jpg' %}"  class="img-responsive">
+            </div>
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <img src="{% static '/core/images/img03.jpg' %}"  class="img-responsive">
+            </div>
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <img src="{% static '/core/images/img04.jpg' %}"  class="img-responsive">
+            </div>
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <img src="{% static '/core/images/img05.jpg' %}"  class="img-responsive">
+            </div>
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <img src="{% static '/core/images/img06.jpg' %}"  class="img-responsive">
+            </div>
+          
+        </div>
+      </div>
+
+ {% endblock %}
